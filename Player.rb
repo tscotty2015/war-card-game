@@ -1,30 +1,30 @@
 class Player
 
-    attr_accessor :name, :hand
+    # Add an attr_accessor with :name, :hand
 
     def initialize(name)
-        @name = name
-        @hand = []
+        # Declare @name and Initialize it with the name parameter passed to this method
+
+        # Initialize @hand with an empty array
     end
 
     def accept_cards(new_cards)
-        @hand += new_cards
+        # Concatenate new_cards to @hand
     end
 
     def play_card
-        #get first card in hand
-        played_card = @hand.take 1
+        # declare variable played_card and get first card in @hand
 
-        #verify card is no longer in hand
-        @hand -= played_card
+        # Remove above cards from @hand
 
-        #return that card
-        played_card
+        # Return played_card
     end
 
     def give_3_cards
-        cards = @hand.take 3
-        @hand -= cards
-        cards
+        # Declare variable cards and get 3 cards from @hand
+
+        # Remove those cards from @hand
+
+        # Return cards
     end
 end

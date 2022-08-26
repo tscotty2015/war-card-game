@@ -4,34 +4,27 @@ class Deck
 
     # Factory method to create the deck
     def self.build_standard_deck
-        # 52 cards
-        # 4 suits each containing a value
-        # 13 Values ranging from A - K
         suits = [:spade, :diamond, :club, :heart]
         values = [:A, 2, 3, 4, 5, 6, 7, 8, 9, 10, :J, :Q, :K]
 
-        deck = Deck.new
+        # Instantiate a new Deck and set it to a variable called deck
 
-        suits.each do |suit|
-            values.each do |value|
-                deck.cards << Card.new(value, suit)
-            end
-        end
+        # Create the deck with all the above combinations
 
-        deck
+        # Return deck
     end
 
-    attr_accessor :cards
+    # add an attr_accessor with :cards
 
     def initialize()
-        @cards = []
+        # Initialize @cards with and empty array
     end
 
     def shuffle!
-        @cards.shuffle!
+        # Shuffle the cards inside the array
     end
 
     def deal_out_a_card()
-        [@cards.pop]
+        # Remove 1 card from the deck
     end
 end
